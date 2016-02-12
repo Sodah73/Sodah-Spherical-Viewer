@@ -1,0 +1,184 @@
+.ssv-container {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  background: radial-gradient(#ffffff, #fdfdfd 16%, #fbfbfb 33%, #f8f8f8 49%, #efefef 66%, #dfdfdf 82%, #bfbfbf 100%);
+  overflow: hidden;
+}
+.ssv-container.loading {
+  text-align: center;
+}
+
+.ssv-canvas-container {
+  position: absolute;
+  z-index: 0;
+}
+.ssv-canvas-container canvas {
+  display: block;
+}
+
+.ssv-loader {
+  position: relative;
+  color: rgba(61, 61, 61, 0.7);
+  width: 150px;
+  height: 150px;
+  border: 10px solid transparent;
+}
+.ssv-loader .loader-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.ssv-loader, .ssv-loader .loader-image, .ssv-loader .loader-text {
+  display: inline-block;
+  vertical-align: middle;
+}
+.ssv-loader .loader-text {
+  font: 14px sans-serif;
+}
+
+.ssv-container.loading::before, .ssv-loader::before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.ssv-navbar {
+  position: absolute;
+  z-index: 100;
+  bottom: 0;
+  width: 100%;
+}
+
+.ssv-navbar, .ssv-navbar * {
+  box-sizing: content-box;
+}
+
+.ssv-navbar .ssv-button {
+  float: left;
+  padding: 10px;
+  position: relative;
+  cursor: pointer;
+  height: 20px;
+  background: transparent;
+}
+.ssv-navbar .ssv-button.active {
+  /*background: rgba(255, 255, 255, 0.1);*/
+}
+.ssv-navbar .ssv-button svg {
+  width: 100%;
+}
+.ssv-navbar .ssv-button svg * {
+  /*fill: rgba(255, 255, 255, 0.7);*/
+}
+
+.ssv-navbar .autorotate-button {
+  width: 20px;
+}
+
+.ssv-navbar .fullscreen-button {
+  float: right;
+  width: 26.66667px;
+  height: 20px;
+}
+
+.ssv-navbar .zoom-button {
+  cursor: default;
+}
+.ssv-navbar .zoom-button .minus, .ssv-navbar .zoom-button .plus {
+  float: left;
+  position: relative;
+  cursor: pointer;
+  width: 14px;
+  height: 14px;
+}
+.ssv-navbar .zoom-button .minus svg, .ssv-navbar .zoom-button .plus svg {
+  position: relative;
+  top: 20%;
+}
+.ssv-navbar .zoom-button .range {
+  float: left;
+  padding: 9.5px 7px;
+}
+.ssv-navbar .zoom-button .range .line {
+  position: relative;
+  cursor: pointer;
+  width: 80px;
+  height: 0px;
+  border-top-width : 1px;
+  border-bottom-width: 1px;
+  border-style: solid;
+  transition: all 0.3s ease;
+}
+.ssv-navbar .zoom-button .range .handle {
+  box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+  position: absolute;
+  border-radius: 50%;
+  top: -3px;
+  width: 7px;
+  height: 7px;
+  border-style: solid;
+  border-width: 3px;
+  transform: scale(1);
+  transition: transform 0.3s ease;
+}
+.ssv-navbar .zoom-button:hover .range .line {
+  /*box-shadow: 0 0 2px rgba(255, 255, 255, 0.7);*/
+}
+.ssv-navbar .zoom-button:hover .range .handle {
+  transform: scale(1.3);
+}
+
+.ssv-navbar .markers-button {
+  width: 20px;
+}
+.ssv-navbar .markers-button svg {
+  transform: scale(1);
+  transition: transform 0.3s ease;
+}
+.ssv-navbar .markers-button:hover svg {
+  transform: scale(1.2);
+}
+
+.ssv-hud {
+  position: absolute;
+  z-index: 50;
+  width: 100%;
+  height: 100%;
+}
+.ssv-hud .marker {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  display: none;
+}
+.ssv-hud .marker.visible {
+  display: block;
+}
+
+.light {
+  background: #f4f4f4;
+  border-color: #000000;
+  fill: #000000;
+}
+
+.dark {
+  background: #232323;
+  border-color: #f9f9f9;
+  fill: #f9f9f9;
+}
+
+.ssv-navbar.light {
+  border: 1px solid #e7e7e7;
+}
+.ssv-navbar.dark {
+  border: 1px solid #303030;
+}
