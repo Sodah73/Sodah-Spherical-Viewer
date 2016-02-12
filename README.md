@@ -2,7 +2,7 @@
 -------------------------
 Contributors: Sodah
 
-Tags: responsive, html5, sphere, viewer, javascript
+Tags: wordpress, responsive, html5, sphere, viewer, javascript
 
 Tested up to Wordpress Version: 4.4.2
 
