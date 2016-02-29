@@ -12,7 +12,7 @@ License: LGPLv3
 
 License URI: http://www.gnu.org/licenses/lgpl-3.0.html
 
-Demo: coming soon
+Demo: http://www.sodah.de/wordpress-plugin-panorama-photo-sphere-viewer/
 
 Sodah Spherical Viewer is a JavaScript library which renders 360° panoramas shots with Photo Sphere, the new camera mode of Android 4.2 Jelly Bean and above.
 
